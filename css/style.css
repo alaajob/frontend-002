@@ -1,0 +1,367 @@
+*{
+   padding:0;
+   margin:0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+a{
+   text-decoration: none;
+   color:var(--text-color)
+}
+a:active{
+   color:var(--box-White);
+}
+ul{
+   list-style-type: none;
+}
+body{
+   background-color:var(--white);
+}
+:root{
+   --white:#FFFFFF;
+   --back-first : #b4c7e0; 
+   --btn-blue : #3E66F9 ; 
+   --shadow : #b9b9b9; 
+   --dark-pink : #b96590 ;
+   --light-pink : #f59dca52 ;
+   --dark-brown : #d6b793 ; 
+   --light-brown : #ceb79d7c ; 
+   --dark-green-blue : #539e9d ;
+   --light-green-blue :rgba(115, 230, 228, 0.616) ;
+   --dark-purple : #5c4b6b ; 
+   --light-purple : #c295eb80 ; 
+   --dark-yellow : #665e39;
+   --light-yellow : #ebe1ab7c;
+   --big-text-color:#283952ee; 
+   --small-text-color:#929292; 
+}
+/* ******************************************************************************************************************* */
+.section{
+   width:100%;
+   height:auto;
+   margin-bottom: 26px;
+}
+.container{
+   width:85%;
+   height:100%;
+   margin: auto;
+   padding: 26px 0;
+}
+.icon{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width:50px;
+   height: 50px;
+   border-radius: 50%;
+
+}
+i{
+   font-size: 45px;
+}
+h1 , h2 , h3 , h4 , h5{
+   color:var(--big-text-color);
+   font-weight: 600;
+   letter-spacing: 2px;
+   margin:13px 0;
+}
+p{
+   font-size: 15px;
+   line-height: 1.45;
+   width:85%;
+   margin:13px 0;
+}
+.section-1{
+   position: relative;
+   z-index:100;
+}
+.section-1::before{
+   content: '';
+   width:70%;
+   height:100%;
+   background: linear-gradient(var(--white) , var(--back-first));
+   position: absolute;
+   top:0;
+   left:0;
+   border-radius: 25px;
+}
+.abs{
+   position: relative;
+}
+.logo{
+   width:100%;
+   color:var(--dark-green-blue)
+}
+.mass-calc{
+   width:100%;
+   height:auto;
+   padding: 13px;
+   margin: auto;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap:10px;
+}
+.mass-calc .left , .mass-calc .right{
+   width:calc(100% / 2 - 10px);
+   margin-top:15px;
+}
+.mass-calc .right .box{
+   width:90%;
+   height:100%;
+   background-color: var(--white);
+   border-radius: 25px;
+   box-shadow: 4px 3px 20px 3px #555;
+   padding:26px ;
+}
+.mass-calc .right .box form .radios , 
+.mass-calc .right .box form .inputs{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap:10px;
+   width:100%;
+
+}
+.mass-calc .right .box form .radios p , 
+.mass-calc .right .box form .inputs p{
+   width:48%;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+.mass-calc .right .box form .inputs p{
+   border-radius: 10px;
+   border: 1px solid gray;
+   padding-right:5px
+}
+.mass-calc .right .box form .inputs p span:first-child{
+   width:86%;
+}
+.mass-calc .right .box form .inputs p span:last-child{
+   color:var(--btn-blue);
+   font-weight: 700;
+}
+.mass-calc .right .box form .inputs p span:first-child input{
+   all:unset;
+   padding: 12px;
+}
+button{
+   text-align: start;
+   padding: 13px;
+   background-color: var(--btn-blue);
+   border:1px solid gray;
+   border-radius: 0 50px 50px 0;
+   color:var(--white);
+   margin:13px 0;
+}
+
+/* ******************************************************** */
+.section-2{
+   height:auto;
+   width:100%;
+}
+.section-2 .bmi-info{
+   display:flex;
+   align-items: center;
+   justify-content: space-between;
+   gap:10px;
+}
+.section-2 .bmi-info .left , .section-2 .bmi-info .right{
+   width:49%;
+}
+.section-2 .bmi-info .left{
+   height:100%;
+   position: relative;
+}
+.section-2 .bmi-info .left::before{
+   content: '';
+   position: absolute;
+   bottom:4px;
+   left:0;
+   background-color: var(--back-first);
+   opacity: 0.9;
+   border-radius: 15px;
+   width:80%;
+   height:65%;
+   z-index: 0;
+}
+.section-2 .bmi-info .left img{
+   height:100%;
+   max-height: 320px;
+   position: relative;
+   margin-left: 50px;
+}
+.section-2 .bmi-info .right{
+   background-color: transparent;
+   padding:auto 5px;
+}
+.section-2 .bmi-info .right h1{
+   margin-top: 26px;
+}
+.section-2 .bmi-info .right p{
+   width:90%
+}
+/* ******************************************************* */
+.section-3{
+   width:100%;
+   height:auto;
+   background: linear-gradient(to right ,var(--white), var(--back-first));
+   padding: 26px 0;
+}
+
+.section-3 .three-boxes{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap:10;
+}
+.section-3 .three-boxes .box{
+   width:calc(100% /3 - 20px);
+   padding: 26px 13px;
+}
+.section-3 .three-boxes .box .icon {
+   box-shadow: 0 0 3px #333;
+}
+.section-3 .three-boxes .box .icon i{
+   font-size: 30px;
+}
+.section-3 .three-boxes .box-1 .icon{
+   background-color: var(--light-pink);
+   color:var(--dark-pink)
+}
+.section-3 .three-boxes .box-2 .icon{
+   background-color: var(--light-brown);
+   color:var(--dark-brown)
+}
+.section-3 .three-boxes .box-3 .icon{
+   background-color: var(--light-green-blue);
+   color:var(--dark-green-blue)
+}
+
+
+@media screen and (min-width:441px) and (max-width:991px) {
+   .container{
+      width:90%;
+      padding:13px;
+   }
+   p{
+      width:100%;
+   }
+   .section-1::before{
+      width:100%;
+      height:70%;
+   }
+   .logo{
+      text-align: center;
+   }
+   .section-1 .mass-calc{
+      flex-direction: column;
+      padding:0;
+   }
+   .mass-calc .left , .mass-calc .right{
+      width:90%;
+      margin:20px auto;
+   }
+   .mass-calc .left{
+      text-align: center;
+   }
+   .mass-calc .right .box{
+      width:95%;
+      padding:30px 30px;
+      margin: auto;
+   }
+   button{
+      width:100%;
+      margin: 13px auto;
+      padding: 26px;
+   }
+   .section-2 .bmi-info{
+      flex-direction: row;
+   }
+   .section-2 .bmi-info .left{
+      margin-left: -40px;
+   }
+   .section-2 .bmi-info .left::before{
+      width: 100%;
+   }
+   .section-2 .bmi-info .right{
+      margin-left: 10px;
+      width:100.6%;
+   }
+   .section-3 .three-boxes{
+      flex-direction: column;
+   }
+   .section-3 .three-boxes .box{
+      width:100%
+   }
+}
+
+@media screen and (max-width:440px) {
+   .section{
+      margin-bottom: 13px;
+   }
+   .container{
+      width:96%;
+   }
+   p{
+      width:100%;
+   }
+   .section-1::before{
+      width:100%;
+      height: 70%;
+   }
+   .logo{
+      text-align: center;
+   }
+   .section-1 .mass-calc{
+      flex-direction: column;
+      padding:7px;
+   }
+   .mass-calc .left , .mass-calc .right{
+      width:100%;
+   }
+   .mass-calc .left{
+      text-align: center;
+   }
+   .mass-calc .right .box{
+      width:100%;
+      padding:20px 12px ;
+   }
+   .mass-calc .right .box form .inputs {
+   flex-direction: column;
+   }
+   .mass-calc .right .box form .inputs p{
+      width:100%;
+      padding:0 10px
+   }
+   .mass-calc .right .box form .inputs p span:first-child{
+      width:90%;
+   }
+   .section-2 .bmi-info{
+      flex-direction: column;
+   }
+   .section-2 .bmi-info .left , .section-2 .bmi-info .right{
+      width:100%;
+   }
+   .section-2 .bmi-info .left::before{
+      width: 100%;
+   }
+   .section-2 .bmi-info .right h1{
+      margin-top: 13px;
+   }
+   .section-2 .bmi-info .right p{
+      width:98%
+   }
+   .section-3 .three-boxes{
+      flex-direction: column;
+   }
+   .section-3 .three-boxes .box{
+      width:100%
+   }
+   
+}
+
+
+
+
